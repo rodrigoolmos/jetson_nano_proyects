@@ -46,7 +46,7 @@ int main() {
     cudaMalloc((void**)&d_c, sizeof(float) * N_ITEMS);
 
     
-    for (size_t i = 0; i < deviceProp.maxThreadsPerMultiProcessor - 50; i+=50){
+    for (size_t i = 0; i < 1024 - 50; i+=50){
         // Transferir datos desde el host al dispositivo
         cudaMemcpy(d_a, h_a, sizeof(float) * N_ITEMS, cudaMemcpyHostToDevice);
         cudaMemcpy(d_b, h_b, sizeof(float) * N_ITEMS, cudaMemcpyHostToDevice);

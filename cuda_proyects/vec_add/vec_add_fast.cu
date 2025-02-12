@@ -50,7 +50,7 @@ int main() {
     cudaMemcpy(d_b, h_b, sizeof(float) * N_ITEMS, cudaMemcpyHostToDevice);
 
     // Configurar los parámetros del kernel
-    blockSize = deviceProp.maxThreadsPerMultiProcessor;
+    blockSize = 1024;
     gridSize = (N_ITEMS + blockSize - 1) / blockSize;
 
     cudaEventRecord(start, 0);    
@@ -60,6 +60,11 @@ int main() {
 
     // Transferir resultado desde el dispositivo al host
     cudaMemcpy(h_c, d_c, sizeof(float) * N_ITEMS, cudaMemcpyDeviceToHost);
+
+    printf("Resultado de la suma:\n");
+    for (int i = 0; i < 100; i++) {
+        printf("%.2f + %.2f = %.2f\n", h_a[i], h_b[i], h_c[i]);
+    }
 
     cudaEventElapsedTime(&milliseconds, start, stop);
     printf("Tiempo de ejecución del kernel: %.4f ms\n", milliseconds);
