@@ -6,3 +6,7 @@ Evaluar el efecto del uso de registros para almacenar variables que se utilizan 
 
 # [02_mac](02_mac)
 Implementar una operación de MAC (Multiplicación Acumulativa) en CUDA utilizando mecanismos de sincronización entre hilos. Se estudia la sincronización dentro de un mismo bloque y se analiza el procesamiento en partes cuando el tamaño de los datos excede el número de hilos disponibles.
+
+# [03_zero_copy](03_zero_copy)
+Evaluar el efecto del uso de zero copy.
+
