@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(VectorAdd LANGUAGES C CXX CUDA)
+project(cuda LANGUAGES C CXX CUDA)
 
 # Especificar el archivo fuente
 add_executable(reg_vs_no_reg reg_vs_no_reg.cu)

@@ -10,3 +10,6 @@ Implementar una operación de MAC (Multiplicación Acumulativa) en CUDA utilizan
 # [03_zero_copy](03_zero_copy)
 Evaluar el efecto del uso de zero copy.
 
+# [03_zero_copy](04_matmul)
+Test diferentes formas de realizar multiplicacion de matrices.
+
